@@ -95,7 +95,7 @@ Recent advances in Multimodal Large Language Models (MLLMs) have revolutionized 
 
 The processed training data is accessible at [here](https://huggingface.co/datasets/OliverHuang1998/3DRS). You can download it and put as `data/` folder.
 
-## Extract VGGT features
+## Extracting VGGT features
 
 You can choose to download the vggt features from [here](https://huggingface.co/datasets/OliverHuang1998/3DRS).
 
