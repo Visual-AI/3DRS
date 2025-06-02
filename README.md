@@ -97,9 +97,9 @@ The processed training data is accessible at [here](https://huggingface.co/datas
 
 ## Extracting VGGT features
 
-You can choose to download the vggt features from [here](https://huggingface.co/datasets/OliverHuang1998/3DRS).
+You need to download the VGGT model from [vggt](https://huggingface.co/facebook/VGGT-1B/blob/main/model.pt), and put in `checkpoints` folder. 
 
-Or you can extract corresponding vggt features by yourself, where you need to download the VGGT model from [vggt](https://huggingface.co/facebook/VGGT-1B/blob/main/model.pt), and put in `checkpoints` folder.
+Afterwards, you need to run the command:
 
 ```bash
 python extract_vggt_feature
