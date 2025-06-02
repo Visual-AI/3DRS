@@ -1,0 +1,11 @@
+datasets:
+  - json_path: data/processed/sqa3d_train_llava_style.json
+    sampling_strategy: "all"
+  - json_path: data/processed/scanqa_train_llava_style.json
+    sampling_strategy: "all"
+  - json_path: data/processed/scan2cap_train_llava_style.json
+    sampling_strategy: "all"
+  - json_path: data/processed/scanrefer_vg_train_llava_style.json
+    sampling_strategy: "all"
+  - json_path: data/processed/multi3drefer_train_llava_style.json
+    sampling_strategy: "all"

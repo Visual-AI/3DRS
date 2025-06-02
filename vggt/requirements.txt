@@ -1,0 +1,4 @@
+numpy==1.26.1
+Pillow
+huggingface_hub
+einops
