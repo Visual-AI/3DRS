@@ -57,7 +57,7 @@ Recent advances in Multimodal Large Language Models (MLLMs) have revolutionized 
 </p>
 
 <p align="center">
-    <img src="assets/radar_performance.png" width="95%">
+    <img src="assets/different_mllms.png" width="95%">
     <br>
     <em><b>3DRS achieves consistent performance improvement on different MLLMs.</b></em>
 </p>
