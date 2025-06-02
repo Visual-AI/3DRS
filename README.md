@@ -1,7 +1,7 @@
 # MLLMs Need 3D-Aware Representation Supervision for Scene Understanding
 
 <div align="center" style="margin-bottom:2em;">
-    <a href="https://arxiv.org/abs/xxx" target="_blank">
+    <a href="#" target="_blank">
         <img src="https://img.shields.io/badge/3DRS-ArXiv-red" alt="Paper arXiv">
     </a>
     <a href="https://huggingface.co/datasets/OliverHuang1998/3DRS" target="_blank">
