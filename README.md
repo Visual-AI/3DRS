@@ -126,6 +126,10 @@ data/
    ├──LLaVA-Video-7B-Qwen2/
 ├── processed/
 └── scannet/
+   ├──mask/
+   ├──pcd_with_object_aabbs/
+   ├──posed_images/
+   |──posed_images_3d_feature_vggt/
 ```
 
 ## Run the training and evaluation
