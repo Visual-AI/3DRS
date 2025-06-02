@@ -4,10 +4,10 @@
     <a href="https://arxiv.org/abs/xxx" target="_blank">
         <img src="https://img.shields.io/badge/3DRS-ArXiv-red" alt="Paper arXiv">
     </a>
-    <a href="https://huggingface.co/datasets/your-dataset-link" target="_blank">
+    <a href="https://huggingface.co/datasets/OliverHuang1998/3DRS" target="_blank">
         <img src="https://img.shields.io/badge/3DRS-Data-blue" alt="3DRS Data">
     </a>
-    <a href="https://yourproject-homepage.link" target="_blank">
+    <a href="visual-ai.github.io/3drs" target="_blank">
         <img src="https://img.shields.io/badge/3DRS-Webpage-green" alt="3DRS Webpage">
     </a>
 </div>
@@ -93,11 +93,11 @@ Recent advances in Multimodal Large Language Models (MLLMs) have revolutionized 
 
 ## Preparing the training data
 
-The processed training data is accessible at [](Google Drive). You can download it and put as `data/` folder.
+The processed training data is accessible at [here](https://huggingface.co/datasets/OliverHuang1998/3DRS). You can download it and put as `data/` folder.
 
 ## Extract VGGT features
 
-You can choose to download the vggt features from [](Google Drive).
+You can choose to download the vggt features from [here](https://huggingface.co/datasets/OliverHuang1998/3DRS).
 
 Or you can extract corresponding vggt features by yourself, where you need to download the VGGT model from [vggt](https://huggingface.co/facebook/VGGT-1B/blob/main/model.pt), and put in `checkpoints` folder.
 
@@ -126,6 +126,10 @@ data/
    ├──LLaVA-Video-7B-Qwen2/
 ├── processed/
 └── scannet/
+   ├──mask/
+   ├──pcd_with_object_aabbs/
+   ├──posed_images/
+   |──posed_images_3d_feature_vggt/
 ```
 
 ## Run the training and evaluation

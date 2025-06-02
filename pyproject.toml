@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "3DRS"
 version = "1.0.0"
-description = "MLLMs Need 3D-Aware Representation Supervision for Scene Understanding
+description = "MLLMs Need 3D-Aware Representation Supervision for Scene Understanding"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
@@ -34,13 +34,13 @@ train = [
     "numpy",
     "requests",
     "sentencepiece",
-    "torch==2.1.2",
-    "torchvision==0.16.2",
+    "torch>=2.1.2",
+    "torchvision>=0.16.2",
     "uvicorn",
     "wandb",
-    "deepspeed==0.14.4",
+    "deepspeed>=0.14.4",
     "peft==0.4.0",
-    "accelerate==0.33.0",
+    "accelerate>=0.33.0",
     "tokenizers~=0.15.2",
     "bitsandbytes==0.41.0",
     "scikit-learn==1.2.2",
@@ -55,6 +55,7 @@ train = [
     "hf_transfer",
     "opencv-python",
     "av",
+    "torch_scatter",
     "decord",
     "tyro",
     "scipy",

@@ -319,7 +319,6 @@ class VideoProcessor:
                 images.append(frame)
 
         crop_size = image_processor.crop_size["width"]
-        strategy == "resize"
         if strategy == "resize":
             images = [frame.resize((crop_size, crop_size)) for frame in images]
             resized_coords = [cv2.resize(coords.numpy(), (384, 384), interpolation=cv2.INTER_NEAREST) for coords in world_coords] 
@@ -363,7 +362,7 @@ class VideoProcessor:
         image_processor,
         force_sample: bool = False,
         frames_upbound: int = 0,
-        strategy: str = "center_crop",
+        strategy: str = "resize",
     ):
         video_dict = self.preprocess(
             video_id,
