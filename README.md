@@ -7,7 +7,7 @@
     <a href="https://huggingface.co/datasets/OliverHuang1998/3DRS" target="_blank">
         <img src="https://img.shields.io/badge/3DRS-Data-blue" alt="3DRS Data">
     </a>
-    <a href="visual-ai.github.io/3drs" target="_blank">
+    <a href="https://visual-ai.github.io/3drs" target="_blank">
         <img src="https://img.shields.io/badge/3DRS-Webpage-green" alt="3DRS Webpage">
     </a>
 </div>
