@@ -295,16 +295,8 @@ class LlavaQwenForCausalLM(Qwen2ForCausalLM, LlavaMetaForCausalLM):
         feature_3d_norm = feature_3d / feature_3d.norm(dim=-1, p=2, keepdim=True)
         feature_sim = (feature_proj_norm * feature_3d_norm.detach()).sum(dim=-1)
         feature_sim_loss = -feature_sim.mean()
-    
-
-        # 计算两个特征矩阵各自两两的余弦相似度，shape均为(32*14*14, 32*14*14)
-        feature_sim_matrix = torch.matmul(feature_proj_norm, feature_proj_norm.transpose(0, 1))
-        feature_3d_sim_martix = torch.matmul(feature_3d_norm, feature_3d_norm.transpose(0, 1))
         
-        # 5. 用均方误差来使hidden_states的相似度矩阵与3d特征的相似度矩阵对齐
-        loss_vis = F.l1_loss(feature_sim_matrix, feature_3d_sim_martix.detach())
-        
-        return feature_sim_loss + loss_vis
+        return feature_sim_loss
     
     def extract_object_feature(self, video_dict, hidden_states, feature_3d=None, img_pos_list=None, img_length_list=None, box_labels=None):
         object_boxes = video_dict["objects"][0]
