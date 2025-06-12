@@ -293,8 +293,9 @@ class LlavaQwenForCausalLM(Qwen2ForCausalLM, LlavaMetaForCausalLM):
         
         feature_proj_norm = feature_proj / feature_proj.norm(dim=-1, p=2, keepdim=True)
         feature_3d_norm = feature_3d / feature_3d.norm(dim=-1, p=2, keepdim=True)
-        feature_sim = (feature_proj_norm * feature_3d_norm.detach()).sum(dim=-1)
-        feature_sim_loss = -feature_sim.mean()
+        
+        feature_sim = ((feature_proj_norm - feature_3d_norm.detach()) ** 2).sum(dim=-1)
+        feature_sim_loss = feature_sim.mean()
         
         return feature_sim_loss
     
