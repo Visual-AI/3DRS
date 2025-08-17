@@ -94,6 +94,7 @@ Recent advances in Multimodal Large Language Models (MLLMs) have revolutionized 
 ## Preparing the training data
 
 The processed training data is accessible at [here](https://huggingface.co/datasets/OliverHuang1998/3DRS). You can download it and put as `data/` folder.
+Besides, you should create the scannet folder by yourself and put the `posed_images` folder into it. The [mask.zip](https://huggingface.co/datasets/zd11024/Video-3D-LLM_data/blob/main/mask.zip) and [pcd_with_object_aabbs.tar.gz](https://huggingface.co/datasets/zd11024/Video-3D-LLM_data/blob/main/pcd_with_object_aabbs.tar.gz) folders can be downloaded from Video-3D-LLM.
 
 ## Extracting VGGT features
 
