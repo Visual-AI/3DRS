@@ -45,6 +45,7 @@ Recent advances in Multimodal Large Language Models (MLLMs) have revolutionized 
 ## News
 
 - **2025-06-03**: We release our paper [arXiv](https://arxiv.org/abs/2506.01946), processed data, training code, and evaluation code.
+- **2025-09-18**: 3DRS has been accepted by Neurips 2025 🎉🎉🎉
 
 ---
 
