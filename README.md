@@ -1,4 +1,4 @@
-# MLLMs Need 3D-Aware Representation Supervision for Scene Understanding
+# [Neurips 2025] MLLMs Need 3D-Aware Representation Supervision for Scene Understanding
 
 <div align="center" style="margin-bottom:2em;">
     <a href="https://arxiv.org/abs/2506.01946" target="_blank">
