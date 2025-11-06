@@ -73,7 +73,7 @@ Recent advances in Multimodal Large Language Models (MLLMs) have revolutionized 
 - [x] Release the training code.
 - [x] Release the evaluation script.
 - [x] Release the training data.
-- [ ] Release the model checkpoint.
+- [x] Release the model checkpoint.
 
 ---
 
