@@ -7,6 +7,9 @@
     <a href="https://huggingface.co/datasets/OliverHuang1998/3DRS" target="_blank">
         <img src="https://img.shields.io/badge/3DRS-Data-blue" alt="3DRS Data">
     </a>
+    <a href="https://huggingface.co/OliverHuang1998/3DRS" target="_blank">
+        <img src="https://img.shields.io/badge/3DRS-Model-blue" alt="3DRS Model">
+    </a>
     <a href="https://visual-ai.github.io/3drs" target="_blank">
         <img src="https://img.shields.io/badge/3DRS-Webpage-green" alt="3DRS Webpage">
     </a>
@@ -46,7 +49,7 @@ Recent advances in Multimodal Large Language Models (MLLMs) have revolutionized 
 
 - **2025-09-18**: 3DRS has been accepted by Neurips 2025 🎉🎉🎉
 - **2025-06-03**: We release our paper [arXiv](https://arxiv.org/abs/2506.01946), processed data, training code, and evaluation code.
-  
+
 ---
 
 ## State-of-the-Art Performance
