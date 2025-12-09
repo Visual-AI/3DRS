@@ -153,6 +153,6 @@ If you find this work useful, please cite:
 @inproceedings{huang2025,
   title={3DRS: MLLMs Need 3D-Aware Representation Supervision for Scene Understanding},
   author={Xiaohu Huang and Jingjing Wu and Qunyi Xie and Kai Han},
-  booktitle={NeurIPS},
+  booktitle={Conference on Neural Information Processing Systems},
   year={2025}
 }
