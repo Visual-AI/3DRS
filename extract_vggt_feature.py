@@ -1,4 +1,5 @@
 import os
+import pickle
 import torch
 import numpy as np
 from tqdm import tqdm
@@ -45,6 +46,24 @@ scene_list = os.listdir(root_dir)
 num_frames_to_sample = 32
 
 # -------------------------------
+# Frame lists used by the training dataloader
+# -------------------------------
+# VideoProcessor.sample_frame_files (llava/video_utils.py) samples from the
+# EmbodiedScan image list, not from the posed_images directory. EmbodiedScan
+# leaves out frames whose camera pose is non-finite, so for about a third of
+# ScanNet scenes the directory holds more .jpg files than the list, and
+# sampling from the directory would pair each VGGT feature with a different
+# frame from the one the MLLM sees. Sample from the same list here.
+video_folder = 'data'
+annotation_dir = 'data/embodiedscan'
+scene_infos = {}
+for split in ['train', 'val', 'test']:
+    with open(os.path.join(annotation_dir, f'embodiedscan_infos_{split}.pkl'), 'rb') as f:
+        for item in pickle.load(f)['data_list']:
+            if item['sample_idx'].startswith('scannet'):
+                scene_infos[item['sample_idx']] = item
+
+# -------------------------------
 # Iterate over each scene and sample a fixed number of frames
 # -------------------------------
 for scene in tqdm(scene_list):
@@ -57,14 +76,17 @@ for scene in tqdm(scene_list):
     if not os.path.exists(scene_save_dir):
         os.makedirs(scene_save_dir)
 
-    # Get all jpg images in the scene, sort them by filename, then sample a fixed number of frames
-    file_names = [file for file in os.listdir(scene_dir) if file.endswith('.jpg')]
-    file_names.sort()
-    total_frames = len(file_names)
+    # Sample a fixed number of frames with the same rule as the dataloader
+    info = scene_infos.get(f'scannet/{scene}')
+    if info is None:
+        print(f'skipping {scene}: not in the EmbodiedScan infos')
+        continue
+    frame_files = [os.path.join(video_folder, img['img_path']) for img in info['images']]
+    total_frames = len(frame_files)
     if total_frames == 0:
         continue
     sampled_indices = np.linspace(0, total_frames - 1, num=num_frames_to_sample, dtype=int)
-    sampled_file_list = [os.path.join(scene_dir, file_names[i]) for i in sampled_indices]
+    sampled_file_list = [frame_files[i] for i in sampled_indices]
 
     # -------------------------------
     # Load images
